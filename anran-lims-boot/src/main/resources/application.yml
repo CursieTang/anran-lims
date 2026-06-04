@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: anran-lims
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${ANRAN_LIMS_DB_URL:jdbc:mysql://localhost:3306/anran_lims?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${ANRAN_LIMS_DB_USERNAME:root}
+    password: ${ANRAN_LIMS_DB_PASSWORD:}
+
+server:
+  port: 8080
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

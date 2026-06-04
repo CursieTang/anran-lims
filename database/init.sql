@@ -1,0 +1,2 @@
+-- Baseline initialization entrypoint.
+-- Keep long-term schema evolution in database/migration.

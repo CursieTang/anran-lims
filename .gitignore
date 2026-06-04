@@ -38,6 +38,11 @@ coverage/
 tmp/
 temp/
 .cache/
+.push-tmp-*/
+.tools/
+
+# Local installers / archives
+*.zip
 
 # Database / backups
 *.sql.bak
